@@ -10,4 +10,5 @@ public class EcoEnergyApplication {
 		SpringApplication.run(EcoEnergyApplication.class, args);
 	}
 
+
 }
