@@ -10,7 +10,7 @@ public class Residencia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idResidencia;
+    private Long idResidencia;
     private String dispositivoMonitoramento;
     private int quantidadePessoas;
     private double mediaConsumo;
@@ -18,7 +18,7 @@ public class Residencia {
     //Relacionamentos
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_usuarios")
-    private Usuarios usuarios;
+    private Usuario usuarios;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_eletrodomestico")
@@ -31,14 +31,14 @@ public class Residencia {
     public Residencia() {
     }
 
-    public Residencia(int idResidencia, String dispositivoMonitoramento, int quantidadePessoas, double mediaConsumo) {
+    public Residencia(Long idResidencia, String dispositivoMonitoramento, int quantidadePessoas, double mediaConsumo) {
         this.idResidencia = idResidencia;
         this.dispositivoMonitoramento = dispositivoMonitoramento;
         this.quantidadePessoas = quantidadePessoas;
         this.mediaConsumo = mediaConsumo;
     }
 
-    public Residencia(int idResidencia, String dispositivoMonitoramento, int quantidadePessoas, double mediaConsumo, Usuarios usuarios, TipoEletrodomestico tipoEletrodomestico, Enderecos enderecos) {
+    public Residencia(Long idResidencia, String dispositivoMonitoramento, int quantidadePessoas, double mediaConsumo, Usuario usuarios, TipoEletrodomestico tipoEletrodomestico, Enderecos enderecos) {
         this.idResidencia = idResidencia;
         this.dispositivoMonitoramento = dispositivoMonitoramento;
         this.quantidadePessoas = quantidadePessoas;

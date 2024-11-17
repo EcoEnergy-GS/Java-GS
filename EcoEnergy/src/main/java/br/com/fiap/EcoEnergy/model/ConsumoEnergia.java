@@ -11,7 +11,7 @@ public class ConsumoEnergia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idConsumo;
+    private Long idConsumo;
     private Date data;
     private double consumo;
 
@@ -23,13 +23,13 @@ public class ConsumoEnergia {
     public ConsumoEnergia() {
     }
 
-    public ConsumoEnergia(int idConsumo, Date data, double consumo) {
+    public ConsumoEnergia(Long idConsumo, Date data, double consumo) {
         this.idConsumo = idConsumo;
         this.data = data;
         this.consumo = consumo;
     }
 
-    public ConsumoEnergia(int idConsumo, Date data, double consumo, Residencia residencia) {
+    public ConsumoEnergia(Long idConsumo, Date data, double consumo, Residencia residencia) {
         this.idConsumo = idConsumo;
         this.data = data;
         this.consumo = consumo;

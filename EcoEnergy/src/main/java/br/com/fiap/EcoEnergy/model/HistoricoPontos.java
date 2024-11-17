@@ -12,19 +12,19 @@ public class HistoricoPontos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idHistorico;
+    private Long idHistorico;
     private Date data;
     private double quantidade;
 
     //Relacionamento
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_usuarios")
-    private Usuarios usuarios;
+    private Usuario usuarios;
 
     public HistoricoPontos() {
     }
 
-    public HistoricoPontos(int idHistorico, Date data, double quantidade, Usuarios usuarios) {
+    public HistoricoPontos(Long idHistorico, Date data, double quantidade, Usuario usuarios) {
         this.idHistorico = idHistorico;
         this.data = data;
         this.quantidade = quantidade;

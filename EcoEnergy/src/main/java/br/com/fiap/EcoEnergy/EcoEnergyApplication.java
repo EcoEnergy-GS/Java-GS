@@ -13,10 +13,4 @@ public class EcoEnergyApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EcoEnergyApplication.class, args);
 	}
-	@GetMapping(value = "/")
-	public String index(){
-		return "ECO_ENERGY";
-	}
-
-
 }

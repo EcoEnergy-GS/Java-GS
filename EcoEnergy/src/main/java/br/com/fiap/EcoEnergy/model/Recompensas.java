@@ -11,14 +11,14 @@ public class Recompensas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idRecompensas;
+    private Long idRecompensas;
     private String desricao;
     private double pontosNecessarios;
 
     public Recompensas() {
     }
 
-    public Recompensas(int idRecompensas, String desricao, double pontosNecessarios) {
+    public Recompensas(Long idRecompensas, String desricao, double pontosNecessarios) {
         this.idRecompensas = idRecompensas;
         this.desricao = desricao;
         this.pontosNecessarios = pontosNecessarios;

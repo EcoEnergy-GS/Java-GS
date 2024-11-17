@@ -12,7 +12,7 @@ public class TrocasRecompensas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idTrocas;
+    private Long idTrocas;
     private Date dataTroca;
     private double pontosUtilizados;
 
@@ -23,18 +23,18 @@ public class TrocasRecompensas {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_usuarios")
-    private Usuarios usuarios;
+    private Usuario usuarios;
 
     public TrocasRecompensas() {
     }
 
-    public TrocasRecompensas(int idTrocas, Date dataTroca, double pontosUtilizados) {
+    public TrocasRecompensas(Long idTrocas, Date dataTroca, double pontosUtilizados) {
         this.idTrocas = idTrocas;
         this.dataTroca = dataTroca;
         this.pontosUtilizados = pontosUtilizados;
     }
 
-    public TrocasRecompensas(int idTrocas, Date dataTroca, double pontosUtilizados, Recompensas recompensas, Usuarios usuarios) {
+    public TrocasRecompensas(Long idTrocas, Date dataTroca, double pontosUtilizados, Recompensas recompensas, Usuario usuarios) {
         this.idTrocas = idTrocas;
         this.dataTroca = dataTroca;
         this.pontosUtilizados = pontosUtilizados;

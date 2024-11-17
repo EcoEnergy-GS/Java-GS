@@ -11,7 +11,7 @@ public class Enderecos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idEndereco;
+    private Long idEndereco;
     private String cep;
     private String rua;
     private String numero;
@@ -20,7 +20,7 @@ public class Enderecos {
     public Enderecos() {
     }
 
-    public Enderecos(int idEndereco, String cep, String rua, String numero, String complemento) {
+    public Enderecos(Long idEndereco, String cep, String rua, String numero, String complemento) {
         this.idEndereco = idEndereco;
         this.cep = cep;
         this.rua = rua;

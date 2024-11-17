@@ -10,14 +10,14 @@ public class TipoEletrodomestico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idEletrodomestico;
+    private Long idEletrodomestico;
     private String nomeEletrodomestico;
     private int quantidade;
 
     public TipoEletrodomestico() {
     }
 
-    public TipoEletrodomestico(int idEletrodomestico, String nomeEletrodomestico, int quantidade) {
+    public TipoEletrodomestico(Long idEletrodomestico, String nomeEletrodomestico, int quantidade) {
         this.idEletrodomestico = idEletrodomestico;
         this.nomeEletrodomestico = nomeEletrodomestico;
         this.quantidade = quantidade;
