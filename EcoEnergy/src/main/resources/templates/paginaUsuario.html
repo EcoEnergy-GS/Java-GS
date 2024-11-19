@@ -5,6 +5,31 @@
     <title>Usuaríos</title>
 </head>
 <body>
+<h1>Lista de Uusários</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome Completo</th>
+        <th>Telefone</th>
+        <th>Pontos</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="usuario : ${usuarios}">
+        <td th:text="${usuario.idUsuarios}"></td>
+        <td th:text="${usuario.nome}"></td>
+        <td th:text="${usuario.telefone}"></td>
+        <td th:text="${usuario.pontos}"></td>
+        <td class="actions">
 
+            <a th:href="@{/usuario/deletar/{id}(id=${usuario.idUsuarios})}" onclick="return confirm('Você tem certeza que deseja excluir?');" th:text="#{button.delete}">Excluir</a>
+            <a th:href="@{/usuario/editar/{id}(id=${usuario.idUsuarios})}">Editar</a>
+            <a th:href="@{/usuario/{id}(id=${usuario.idUsuarios})}">Ver</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a class="add-button" href="/usuario/nova">Adicionar</a>
 </body>
-</html>
+</html>l>

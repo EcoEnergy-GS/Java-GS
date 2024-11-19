@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes Usuário</title>
+</head>
+<body>
+<h1>Detalhes do Usuario</h1>
+<div class="details">
+    <p><span th:text="${usuario.idUsuarios}"></span></p>
+    <p><span th:text="${usuario.nome}"></span></p>
+    <p><span th:text="${usuario.telefone}"></span></p>
+    <p><span th:text="${usuario.pontos}"></span></p>
+</div>
+<div class="actions">
+    <a href="/usuario">Voltar</a>
+    <a class="edit-button" th:href="@{/usuario/editar/{id}(id=${usuario.idUsuarios})}">Editar</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Usuário</title>
+</head>
+<body>
+<h1>Adicionar Novo Usuário</h1>
+<form action="#" th:action="@{/usuario/adicionar}" th:object="${usuario}" method="post">
+    <label for="nome">Nome Completo</label>
+    <input type="text" id="nome" th:field="*{nome}" />
+
+    <label for="senha">Senha</label>
+    <textarea id="senha" th:field="*{senha}"></textarea>
+
+    <label for="telefone">Telefone</label>
+    <input type="text" id="telefone" th:field="*{telefone}" />
+
+    <label for="pontos">Pontos do Usuário</label>
+    <input type="text" id="pontos" th:field="*{pontos}" />
+
+    <button type="submit">Adicionar</button>
+</form>
+<a href="/usuario">Voltar</a>
+</body>
+</html>

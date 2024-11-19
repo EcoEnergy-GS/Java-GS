@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Usuário</title>
+</head>
+<body>
+<h1>Editar Usuário</h1>
+<form th:action="@{/usuario/atualizar/{id}(id=${usuario.getIdUsuarios()})}" th:object="${usuario}" method="post">
+    <label for="nome">Nome Completo</label>
+    <input type="text" id="nome" th:field="*{nome}" />
+
+    <label for="senha">Senha</label>
+    <textarea id="senha" th:field="*{senha}"></textarea>
+
+    <label for="telefone">Telefone</label>
+    <input type="text" id="telefone" th:field="*{telefone}" />
+
+    <label for="pontos">Pontos</label>
+    <input type="text" id="pontos" th:field="*{pontos}" />
+
+    <button type="submit">Atualizar Produto</button>
+    <a href="/usuario">Cancelar</a>
+</form>
+</body>
+</html>
