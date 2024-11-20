@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes Endereço</title>
+</head>
+<body>
+<h1>Detalhes do Endereço</h1>
+<div class="details">
+    <p><span th:text="${endereco.idEndereco}"></span></p>
+    <p><span th:text="${endereco.cep}"></span></p>
+    <p><span th:text="${endereco.rua}"></span></p>
+    <p><span th:text="${endereco.numero}"></span></p>
+    <p><span th:text="${endereco.complemento}"></span></p>
+</div>
+<div class="actions">
+    <a href="/endereco">Voltar</a>
+    <a class="edit-button" th:href="@{/endereco/editar/{id}(id=${endereco.idEndereco})}">Editar</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Endereço</title>
+</head>
+<body>
+<h1>Editar Endereço</h1>
+<form th:action="@{/endereco/atualizar/{id}(id=${endereco.idEndereco()})}" th:object="${endereco}" method="post">
+    <label for="cep">CEP</label>
+    <input type="text" id="cep" th:field="*{cep}" />
+
+    <label for="rua">Rua</label>
+    <textarea id="rua" th:field="*{rua}"></textarea>
+
+    <label for="numero">Número</label>
+    <input type="text" id="numero" th:field="*{numero}" />
+
+    <label for="complemento">Complemento</label>
+    <input type="text" id="complemento" th:field="*{complemento}" />
+
+    <button type="submit">Atualizar</button>
+    <a href="/endereco">Cancelar</a>
+</form>
+</body>
+</html>

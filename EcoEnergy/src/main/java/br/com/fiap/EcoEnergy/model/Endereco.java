@@ -1,13 +1,12 @@
 package br.com.fiap.EcoEnergy.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
 import lombok.Data;
 
 @Entity
 @Table(name = "TBL_ENDERECOS")
 @Data
-public class Enderecos {
+public class Endereco {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,10 +16,10 @@ public class Enderecos {
     private String numero;
     private String complemento;
 
-    public Enderecos() {
+    public Endereco() {
     }
 
-    public Enderecos(Long idEndereco, String cep, String rua, String numero, String complemento) {
+    public Endereco(Long idEndereco, String cep, String rua, String numero, String complemento) {
         this.idEndereco = idEndereco;
         this.cep = cep;
         this.rua = rua;

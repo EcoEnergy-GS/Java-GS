@@ -26,7 +26,7 @@ public class Residencia {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_endereco")
-    private Enderecos enderecos;
+    private Endereco enderecos;
 
     public Residencia() {
     }
@@ -38,7 +38,7 @@ public class Residencia {
         this.mediaConsumo = mediaConsumo;
     }
 
-    public Residencia(Long idResidencia, String dispositivoMonitoramento, int quantidadePessoas, double mediaConsumo, Usuario usuarios, TipoEletrodomestico tipoEletrodomestico, Enderecos enderecos) {
+    public Residencia(Long idResidencia, String dispositivoMonitoramento, int quantidadePessoas, double mediaConsumo, Usuario usuarios, TipoEletrodomestico tipoEletrodomestico, Endereco enderecos) {
         this.idResidencia = idResidencia;
         this.dispositivoMonitoramento = dispositivoMonitoramento;
         this.quantidadePessoas = quantidadePessoas;

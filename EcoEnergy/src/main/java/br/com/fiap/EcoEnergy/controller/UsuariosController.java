@@ -13,19 +13,12 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 public class UsuariosController {
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Autowired
     private UsuariosRepository usuariosRepository;
-
-    @Autowired
-    private RoleRepository roleRepository;
 
     @GetMapping("/usuario")
     public String retornarPagina(Model model) {
