@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Consumo de Energia</title>
+</head>
+<body>
+<h1>Detalhes do Consumo de Energia</h1>
+<div class="details">
+    <p><span th:text="${consumoEnergia.idConsumo}"></span></p>
+    <p><span th:text="${consumoEnergia.data}"></span></p>
+    <p><span th:text="${consumoEnergia.consumo}"></span></p>
+</div>
+<div class="actions">
+    <a href="/consumoEnergia">Voltar</a>
+    <a class="edit-button" th:href="@{/consumoEnergia/editar/{id}(id=${consumoEnergia.idConsumo})}">Editar</a>
+</div>
+</body>
+</html>

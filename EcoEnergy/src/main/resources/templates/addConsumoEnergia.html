@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Consumo de Energia</title>
+</head>
+<body>
+<h1>Adicionar Consumo de Energia</h1>
+<form action="#" th:action="@{/consumoEnergia/adicionar}" th:object="${consumoEnergia}" method="post">
+    <label for="data">Data da Cobrança</label>
+    <input type="text" id="data" th:field="*{data}" />
+
+    <label for="consumo">Consumo de Energia</label>
+    <input type="text" id="consumo" th:field="*{consumo}" />
+
+    <button type="submit">Adicionar</button>
+</form>
+<a href="/consumoEnergia">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Consumo de Energia</title>
+</head>
+<body>
+<h1>Editar Usuário</h1>
+<form th:action="@{/consumoEnergia/atualizar/{id}(id=${consumoEnergia.getIdConsumo()})}" th:object="${consumoEnergia}" method="post">
+    <label for="data">Data da Cobrança</label>
+    <input type="text" id="data" th:field="*{data}" />
+
+    <label for="consumo">Consumo de Energia</label>
+    <input type="text" id="consumo" th:field="*{consumo}" />
+
+    <button type="submit">Atualizar</button>
+    <a href="/consumoEnergia">Cancelar</a>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuaríos</title>
+</head>
+<body>
+<h1>Lista de Usários</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Data da Cobrança</th>
+        <th>Consumo de Energia</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="consumoEnergia : ${consumoEnergias}">
+        <td th:text="${consumoEnergia.idConsumo}"></td>
+        <td th:text="${consumoEnergia.data}"></td>
+        <td th:text="${consumoEnergia.consumo}"></td>
+        <td class="actions">
+
+            <a th:href="@{/consumoEnergia/deletar/{id}(id=${consumoEnergia.idConsumo})}" onclick="return confirm('Você tem certeza que deseja excluir?');">Excluir</a>
+            <a th:href="@{/consumoEnergia/editar/{id}(id=${consumoEnergia.idConsumo})}">Editar</a>
+            <a th:href="@{/consumoEnergia/{id}(id=${consumoEnergia.idConsumo})}">Ver</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a class="add-button" href="/consumoEnergia/nova">Adicionar</a>
+</body>
+</html>
