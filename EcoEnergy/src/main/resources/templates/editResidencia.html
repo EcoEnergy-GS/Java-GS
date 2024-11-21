@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Residência</title>
+</head>
+<body>
+<h1>Editar Residência</h1>
+<form th:action="@{/residencia/atualizar/{id}(id=${residencia.idResidencia()})}" th:object="${residencia}" method="post">
+    <label for="dispositivoMonitoramento">Dispositivos de Monitoramento</label>
+    <input type="text" id="dispositivoMonitoramento" th:field="*{dispositivoMonitoramento}" />
+
+    <label for="quantidadePessoas">Quantidade Pessoas</label>
+    <input type="text" id="quantidadePessoas" th:field="*{quantidadePessoas}" />
+
+    <label for="mediaConsumo">Pontos</label>
+    <input type="text" id="mediaConsumo" th:field="*{mediaConsumo}" />
+
+    <button type="submit">Atualizar</button>
+    <a href="/residencia">Cancelar</a>
+</form>
+</body>
+</html>

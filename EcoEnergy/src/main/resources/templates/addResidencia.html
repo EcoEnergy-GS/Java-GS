@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Residência</title>
+</head>
+<body>
+<h1>Adicionar Nova Residência</h1>
+<form action="#" th:action="@{/residencia/adicionar}" th:object="${residencia}" method="post">
+    <label for="dispositivoMonitoramento">Dispositivos de Monitoramento</label>
+    <input type="text" id="dispositivoMonitoramento" th:field="*{dispositivoMonitoramento}" />
+
+    <label for="quantidadePessoas">Pessoas na Residência</label>
+    <input type="text" id="quantidadePessoas" th:field="*{quantidadePessoas}" />
+
+    <label for="mediaConsumo">Média de Consumo</label>
+    <input type="text" id="mediaConsumo" th:field="*{mediaConsumo}" />
+
+    <button type="submit">Adicionar</button>
+</form>
+<a href="/residencia">Voltar</a>
+</body>
+</html>

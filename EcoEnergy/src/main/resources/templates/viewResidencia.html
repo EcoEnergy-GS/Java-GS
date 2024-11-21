@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes Residência</title>
+</head>
+<body>
+<h1>Detalhes da Residência</h1>
+<div class="details">
+    <p><span th:text="${residencia.dispositivoMonitoramento}"></span></p>
+    <p><span th:text="${residencia.quantidadePessoas}"></span></p>
+    <p><span th:text="${residencia.mediaConsumo}"></span></p>
+</div>
+<div class="actions">
+    <a href="/residencia">Voltar</a>
+    <a class="edit-button" th:href="@{/residencia/editar/{id}(id=${residencia.idResidencia})}">Editar</a>
+</div>
+</body>
+</html>

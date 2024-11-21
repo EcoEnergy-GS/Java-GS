@@ -1,0 +1,34 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Residências</title>
+</head>
+<body>
+<h1>Lista de Residências</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Dispositivos de Monitoramento</th>
+        <th>Quantidade de Pessoas</th>
+        <th>Média de Consumo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="residencia : ${residencias}">
+        <td th:text="${residencia.dispositivoMonitoramento}"></td>
+        <td th:text="${residencia.quantidadePessoas}"></td>
+        <td th:text="${residencia.mediaConsumo}"></td>
+        <td class="actions">
+
+            <a th:href="@{/residencia/deletar/{id}(id=${residencia.idResidencia})}" onclick="return confirm('Você tem certeza que deseja excluir?');">Excluir</a>
+            <a th:href="@{/residencia/editar/{id}(id=${residencia.idResidencia})}">Editar</a>
+            <a th:href="@{/residencia/{id}(id=${residencia.idResidencia})}">Ver</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a class="add-button" href="/residencia/nova">Adicionar</a>
+</body>
+</html>
