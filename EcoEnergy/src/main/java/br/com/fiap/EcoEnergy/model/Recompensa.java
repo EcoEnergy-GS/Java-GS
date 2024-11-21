@@ -2,25 +2,24 @@ package br.com.fiap.EcoEnergy.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Entity
 @Data
 @Table(name = "TBL_RECOMPENSAS")
-public class Recompensas {
+public class Recompensa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idRecompensas;
-    private String desricao;
+    private String descricao;
     private double pontosNecessarios;
 
-    public Recompensas() {
+    public Recompensa() {
     }
 
-    public Recompensas(Long idRecompensas, String desricao, double pontosNecessarios) {
+    public Recompensa(Long idRecompensas, String descricao, double pontosNecessarios) {
         this.idRecompensas = idRecompensas;
-        this.desricao = desricao;
+        this.descricao = descricao;
         this.pontosNecessarios = pontosNecessarios;
     }
 

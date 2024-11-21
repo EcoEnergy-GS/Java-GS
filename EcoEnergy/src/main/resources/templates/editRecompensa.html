@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Recompensa</title>
+</head>
+<body>
+<h1>Editar Usuário</h1>
+<form th:action="@{/recompensa/atualizar/{id}(id=${recompensa.getIdRecompensas()})}" th:object="${recompensa}" method="post">
+    <label for="descricao">Descrição</label>
+    <input type="text" id="descricao" th:field="*{descricao}" />
+
+    <label for="pontosNecessários">Pontos Necessários</label>
+    <input type="text" id="pontosNecessários" th:field="*{pontosNecessarios}" />
+
+    <button type="submit">Atualizar</button>
+    <a href="/recompensa">Cancelar</a>
+</form>
+</body>
+</html>

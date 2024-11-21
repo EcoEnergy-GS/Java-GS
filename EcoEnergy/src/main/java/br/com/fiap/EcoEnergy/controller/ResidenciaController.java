@@ -54,24 +54,6 @@ public class ResidenciaController {
         return "editResidencia";
     }
 
-//    private Long idResidencia;
-//    private String dispositivoMonitoramento;
-//    private int quantidadePessoas;
-//    private double mediaConsumo;
-//
-//    //Relacionamentos
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "id_usuarios")
-//    private Usuario usuarios;
-//
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "id_eletrodomestico")
-//    private TipoEletrodomestico tipoEletrodomestico;
-//
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "id_endereco")
-//    private Endereco enderecos;
-
     @PostMapping("/residencia/atualizar/{id}")
     public String updateResidencia(@PathVariable("id") Long id, @ModelAttribute("residencia") Residencia updatedResidencia) {
         Residencia existingResidencia = residenciaRepository.findById(id)
@@ -79,9 +61,6 @@ public class ResidenciaController {
         existingResidencia.setDispositivoMonitoramento(updatedResidencia.getDispositivoMonitoramento());
         existingResidencia.setQuantidadePessoas(updatedResidencia.getQuantidadePessoas());
         existingResidencia.setMediaConsumo(updatedResidencia.getMediaConsumo());
-        existingResidencia.setUsuarios(updatedResidencia.getUsuarios());
-        existingResidencia.setTipoEletrodomestico(updatedResidencia.getTipoEletrodomestico());
-        existingResidencia.setEnderecos(updatedResidencia.getEnderecos());
         residenciaRepository.save(existingResidencia);
         return "redirect:/residencia";
     }

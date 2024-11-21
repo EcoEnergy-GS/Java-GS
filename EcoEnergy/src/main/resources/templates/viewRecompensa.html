@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes Recompensa</title>
+</head>
+<body>
+<h1>Detalhes Recompensa</h1>
+<div class="details">
+    <p><span th:text="${recompensa.idRecompensas}"></span></p>
+    <p><span th:text="${recompensa.descricao}"></span></p>
+    <p><span th:text="${recompensa.pontosNecessarios}"></span></p>
+</div>
+<div class="actions">
+    <a href="/recompensa">Voltar</a>
+    <a class="edit-button" th:href="@{/recompensa/editar/{id}(id=${recompensa.idRecompensas})}">Editar</a>
+</div>
+</body>
+</html>

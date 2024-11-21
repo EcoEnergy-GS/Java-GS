@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Editar Endereço</h1>
-<form th:action="@{/endereco/atualizar/{id}(id=${endereco.idEndereco()})}" th:object="${endereco}" method="post">
+<form th:action="@{/endereco/atualizar/{id}(id=${endereco.getIdEndereco()})}" th:object="${endereco}" method="post">
     <label for="cep">CEP</label>
     <input type="text" id="cep" th:field="*{cep}" />
 

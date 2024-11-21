@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recompensas</title>
+</head>
+<body>
+<h1>Lista de Recompensas</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Pontos Necessários</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="recompensa : ${recompensas}">
+        <td th:text="${recompensa.idRecompensas}"></td>
+        <td th:text="${recompensa.descricao}"></td>
+        <td th:text="${recompensa.pontosNecessarios}"></td>
+        <td class="actions">
+
+            <a th:href="@{/recompensa/deletar/{id}(id=${recompensa.idRecompensas})}" onclick="return confirm('Você tem certeza que deseja excluir?');">Excluir</a>
+            <a th:href="@{/recompensa/editar/{id}(id=${recompensa.idRecompensas})}">Editar</a>
+            <a th:href="@{/recompensa/{id}(id=${recompensa.idRecompensas})}">Ver</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a class="add-button" href="/recompensa/nova">Adicionar</a>
+</body>
+</html>

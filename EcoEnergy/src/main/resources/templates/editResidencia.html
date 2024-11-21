@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Editar Residência</h1>
-<form th:action="@{/residencia/atualizar/{id}(id=${residencia.idResidencia()})}" th:object="${residencia}" method="post">
+<form th:action="@{/residencia/atualizar/{id}(id=${residencia.getIdResidencia()})}" th:object="${residencia}" method="post">
     <label for="dispositivoMonitoramento">Dispositivos de Monitoramento</label>
     <input type="text" id="dispositivoMonitoramento" th:field="*{dispositivoMonitoramento}" />
 

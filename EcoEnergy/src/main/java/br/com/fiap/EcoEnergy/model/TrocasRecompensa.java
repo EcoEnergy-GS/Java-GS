@@ -8,7 +8,7 @@ import java.util.Date;
 @Entity
 @Table(name = "TBL_TROCAS_RECOMPENSAS")
 @Data
-public class TrocasRecompensas {
+public class TrocasRecompensa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,22 +19,22 @@ public class TrocasRecompensas {
     //Relacionamentos
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_recompensas")
-    private Recompensas recompensas;
+    private Recompensa recompensas;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_usuarios")
     private Usuario usuarios;
 
-    public TrocasRecompensas() {
+    public TrocasRecompensa() {
     }
 
-    public TrocasRecompensas(Long idTrocas, Date dataTroca, double pontosUtilizados) {
+    public TrocasRecompensa(Long idTrocas, Date dataTroca, double pontosUtilizados) {
         this.idTrocas = idTrocas;
         this.dataTroca = dataTroca;
         this.pontosUtilizados = pontosUtilizados;
     }
 
-    public TrocasRecompensas(Long idTrocas, Date dataTroca, double pontosUtilizados, Recompensas recompensas, Usuario usuarios) {
+    public TrocasRecompensa(Long idTrocas, Date dataTroca, double pontosUtilizados, Recompensa recompensas, Usuario usuarios) {
         this.idTrocas = idTrocas;
         this.dataTroca = dataTroca;
         this.pontosUtilizados = pontosUtilizados;

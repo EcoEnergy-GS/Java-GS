@@ -17,6 +17,7 @@
     </thead>
     <tbody>
     <tr th:each="residencia : ${residencias}">
+        <td th:text="${residencia.idResidencia}"></td>
         <td th:text="${residencia.dispositivoMonitoramento}"></td>
         <td th:text="${residencia.quantidadePessoas}"></td>
         <td th:text="${residencia.mediaConsumo}"></td>

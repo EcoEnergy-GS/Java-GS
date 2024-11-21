@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Recompensas</title>
+</head>
+<body>
+<h1>Adicionar Nova Recompensa</h1>
+<form action="#" th:action="@{/recompensa/adicionar}" th:object="${recompensa}" method="post">
+    <label for="descricao">Descrição</label>
+    <input type="text" id="descricao" th:field="*{descricao}" />
+
+    <label for="pontosNecessarios">Pontos Necessários</label>
+    <input type="text" id="pontosNecessarios" th:field="*{pontosNecessarios}" />
+
+    <button type="submit">Adicionar</button>
+</form>
+<a href="/recompensa">Voltar</a>
+</body>
+</html>
