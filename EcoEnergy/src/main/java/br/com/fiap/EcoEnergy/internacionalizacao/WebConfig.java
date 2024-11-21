@@ -23,23 +23,23 @@ public class WebConfig implements WebMvcConfigurer {
         return ms;
     }
 
-//    @Bean
-//    LocaleResolver localeResolver() {
-//        CookieLocaleResolver lr = new CookieLocaleResolver();
-//        lr.setDefaultLocale(Locale.forLanguageTag("pt"));
-//        return lr;
-//    }
-//
-//    @Bean
-//    LocaleChangeInterceptor localeChangeInterceptor() {
-//        LocaleChangeInterceptor ci = new LocaleChangeInterceptor();
-//        ci.setParamName("lang");
-//        return ci;
-//    }
-//
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(localeChangeInterceptor());
-//    }
+    @Bean
+    LocaleResolver localeResolver() {
+        CookieLocaleResolver lr = new CookieLocaleResolver();
+        lr.setDefaultLocale(Locale.forLanguageTag("pt"));
+        return lr;
+    }
+
+    @Bean
+    LocaleChangeInterceptor localeChangeInterceptor() {
+        LocaleChangeInterceptor ci = new LocaleChangeInterceptor();
+        ci.setParamName("lang");
+        return ci;
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(localeChangeInterceptor());
+    }
 
 }

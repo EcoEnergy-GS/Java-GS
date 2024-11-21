@@ -1,6 +1,7 @@
 package br.com.fiap.EcoEnergy.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Entity
@@ -11,6 +12,7 @@ public class Residencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idResidencia;
+    @Size(max = 50)
     private String dispositivoMonitoramento;
     private int quantidadePessoas;
     private double mediaConsumo;
