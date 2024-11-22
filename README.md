@@ -15,7 +15,7 @@ Projeto Full MVC Spring Boot Thymeleaf
 
 - Para pegar o arquivo, clone o repositório ná sua maquina utilizando o comando a seguir:
 ```
-https://github.com/EcoEnergy-GS/JavaAdvanced_GS
+https://github.com/EcoEnergy-GS/Java-GS
 ```
 - Ao abrir o projeto, crie um file ".env" na altura no projeto contendo os seguintes dados a seguir.
 - É necessário realizar este passo para realizar a conexão com o banco da oracle!
