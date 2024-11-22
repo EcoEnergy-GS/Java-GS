@@ -1,0 +1,32 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head/>
+
+<body>
+
+<div class="container">
+
+	<div>
+		<h1><b>Em que posso ajudar?</b></h1>
+	</div>
+
+	<div>
+
+		<form th:action="@{/enviar_pergunta_chat_gpt}" method="post">
+
+			Escreva sua pergunta:
+			<input class="form-control" type="text" name="pergunta" id="pergunta"><br>
+			<p th:text="${var}" style="color: green;"><b> </b></p><br>
+			<button type="submit">Perguntar</button>
+
+		</form>
+
+	</div>
+
+</div>
+
+
+</body>
+
+</html>

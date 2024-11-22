@@ -8,6 +8,6 @@ public class LoginController {
 
     @GetMapping("/login")
     public String login() {
-        return "login"; // Nome do arquivo HTML do formulário de login (login.html)
+        return "login";
     }
 }
