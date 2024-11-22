@@ -33,4 +33,4 @@ mvn spring-boot:run
 # Link do vídeo Pitch / Aplicação
 
 - Vídeo no Youtube
--
+- https://youtu.be/ZnyikhPWnuo
