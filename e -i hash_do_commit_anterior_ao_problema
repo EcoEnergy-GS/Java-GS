@@ -1,0 +1,96 @@
+[33mcommit e85672b7d261d0dd6843b9c7d774f73ba67348f8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: 8c08611 34014b9
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Fri Nov 22 16:22:55 2024 -0300
+
+    Projeto finalizado para o entregável de java advancedgit stat
+
+[33mcommit 8c0861127cc2dd8fee194d7a5a5b074bc8160946[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Fri Nov 22 16:20:23 2024 -0300
+
+    Projeto finalizado para o entregável de java advanced
+
+[33mcommit 34014b9a50be3a541698c2a664d1c405683a9918[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Mateus Mantovani Araújo <126684801+Mmateus106@users.noreply.github.com>
+Date:   Fri Nov 22 16:19:32 2024 -0300
+
+    Update README.md
+
+[33mcommit fb8d90a660c6efcd5ce895d3882c1a96316d1024[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Thu Nov 21 21:11:00 2024 -0300
+
+    Estilização parcialmente feita / Open AI API implementada ao projeto
+
+[33mcommit a5d031fc155f62b077dfa468e0a4e9b6ffbfd083[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Thu Nov 21 18:29:52 2024 -0300
+
+    API Key removida do projeto
+
+[33mcommit 27bd300ada72f57a771978a205a4870f006242da[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Thu Nov 21 15:03:57 2024 -0300
+
+    Templates/Controller de ConsumoEnergia finalizados, e RabbitMQ implementado
+
+[33mcommit 3e2b6d2248c9b9ad8a44050850a0e3b7c7690b1d[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Thu Nov 21 03:15:56 2024 -0300
+
+    Templates/Controller de Recompensa finalizados
+
+[33mcommit 9d258856511fe104c2794a1e7b0c1ed886810217[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Wed Nov 20 23:57:24 2024 -0300
+
+    Templates/Controller de Residencia finalizados
+
+[33mcommit 08a1e60c34e61002357d8a3eb034bbee92f7dfcd[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Wed Nov 20 17:25:56 2024 -0300
+
+    Templates/Controller de Endereco finalizados
+
+[33mcommit d81a171ffc9f904b76231ea1653888ea794d9f63[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Tue Nov 19 19:55:31 2024 -0300
+
+    Templates/Controller de Usuário finalizados
+
+[33mcommit cd4f463bcb6b52a0025d30f02d52abfdd9b6fa11[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Sun Nov 17 17:14:47 2024 -0300
+
+    Criando Templates de Usuario
+
+[33mcommit 1effecee775b20d20650793522eadd402087c47c[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Thu Nov 14 15:26:38 2024 -0300
+
+    Spring Boot Actuator implementado ao projeto
+
+[33mcommit 97015140c9009c0a41e1d20071aa1778d203debe[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Thu Nov 14 15:10:27 2024 -0300
+
+    Camada Repository implementada ao projeto
+
+[33mcommit a22e4191db495a3f8b211031c1cbcea5e11220b6[m
+Author: Mmateus106 <rm98524@fiap.com.br>
+Date:   Thu Nov 14 14:58:16 2024 -0300
+
+    Camada Model implementada ao projeto
+
+[33mcommit d1722bba05c2d8d91e69af432cb8d42df8e6215e[m
+Author: Mateus Mantovani Araújo <126684801+Mmateus106@users.noreply.github.com>
+Date:   Thu Nov 14 13:44:21 2024 -0300
+
+    Arquivo do projeto gerado no Spring Initializr
+
+[33mcommit 2def8ea9acdd334ca3137b6b0e75df0a64e5423c[m
+Author: Mateus Mantovani Araújo <126684801+Mmateus106@users.noreply.github.com>
+Date:   Thu Nov 14 13:38:01 2024 -0300
+
+    Initial commit
