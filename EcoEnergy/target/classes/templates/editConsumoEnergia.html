@@ -1,5 +1,5 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title th:text="#{title.editConsumoEnergia}">Editar Consumo de Energia</title>
@@ -34,18 +34,18 @@
 <body>
 <div class="container mt-5">
     <h1 class="text-center mb-4" th:text="#{title.editConsumoEnergia}">Editar Consumo de Energia</h1>
-    <form th:action="@{/consumoEnergia/atualizar/{id}(id=${consumoEnergia.getIdConsumo()})}" th:object="${consumoEnergia}" method="post" class="p-4 rounded border border-secondary">
+    <form th:action="@{/consumoEnergia/atualizar/{id}(id=${consumoEnergia.getIdConsumo()})}" th:object="${consumoEnergia}" method="post" class="mx-auto col-lg-6">
         <div class="mb-3">
-            <label for="data" class="form-label" th:text="#{label.dataCobranca}">Data da Cobrança</label>
-            <input type="text" id="data" th:field="*{data}" class="form-control" placeholder="dd/mm/aaaa"/>
+            <label for="data">Data da Cobrança</label>
+            <input type="text" id="data" class="form-control" th:field="*{data}" />
         </div>
         <div class="mb-3">
-            <label for="consumo" class="form-label" th:text="#{label.consumoEnergia}">Consumo de Energia</label>
-            <input type="text" id="consumo" th:field="*{consumo}" class="form-control" placeholder="Ex.: 120 kWh"/>
+            <label for="consumo" th:text="#{label.consumoEnergia}">Consumo de Energia</label>
+            <input type="text" id="consumo" class="form-control" th:field="*{consumo}">
         </div>
-        <div class="d-flex gap-2">
-            <button type="submit" class="btn btn-primary flex-fill" th:text="#{btn.atualizar}">Atualizar</button>
-            <a href="/consumoEnergia" class="btn btn-secondary flex-fill" th:text="#{link.cancelar}">Cancelar</a>
+        <div class="d-flex justify-content-between">
+            <a href="/consumoEnergia" class="btn btn-secondary" th:text="#{link.cancelar}">Cancelar</a>
+            <button type="submit" class="btn" th:text="#{btn.atualizar}">Atualizar</button>
         </div>
     </form>
 </div>

@@ -34,14 +34,14 @@
 <body>
 <div class="container mt-5">
     <h1 class="text-center mb-4" th:text="#{title.detalhesConsumoEnergia}">Detalhes do Consumo de Energia</h1>
-    <div class="details">
+    <div class="details bg-dark text-white p-3 rounded">
         <p><strong>ID:</strong> <span th:text="${consumoEnergia.idConsumo}"></span></p>
-        <p><strong>Data:</strong> <span th:text="${consumoEnergia.data}"></span></p>
-        <p><strong>Consumo:</strong> <span th:text="${consumoEnergia.consumo}"></span></p>
+        <p><strong>CEP:</strong> <span th:text="${consumoEnergia.data}"></span></p>
+        <p><strong>Rua:</strong> <span th:text="${consumoEnergia.consumo}"></span></p>
     </div>
-    <div class="actions mt-3">
-        <a class="btn btn-secondary" href="/consumoEnergia" th:text="#{link.voltar}">Voltar</a>
-        <a class="btn btn-warning" th:href="@{/consumoEnergia/editar/{id}(id=${consumoEnergia.idConsumo})}" th:text="#{link.editar}">Editar</a>
+    <div class="actions mt-4 d-flex justify-content-between">
+        <a href="/consumoEnergia" class="btn btn-secondary" th:text="#{link.voltar}">Voltar</a>
+        <a href="#" class="btn btn-primary" th:href="@{/consumoEnergia/editar/{id}(id=${consumoEnergia.idConsumo})}" th:text="#{link.editar}">Editar</a>
     </div>
 </div>
 </body>

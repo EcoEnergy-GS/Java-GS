@@ -1,5 +1,5 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title th:text="#{title.listaEnderecos}">Lista de Endereços</title>
@@ -42,7 +42,7 @@
             <th th:text="#{label.rua}">Rua</th>
             <th th:text="#{label.numero}">Número</th>
             <th th:text="#{label.complemento}">Complemento</th>
-            <th>Ações</th>
+            <th th:text="#{label.acoes}">Ações</th>
         </tr>
         </thead>
         <tbody>
@@ -53,9 +53,9 @@
             <td th:text="${endereco.numero}"></td>
             <td th:text="${endereco.complemento}"></td>
             <td>
-                <a class="btn btn-danger btn-sm" th:href="@{/endereco/deletar/{id}(id=${endereco.idEndereco})}">Excluir</a>
-                <a class="btn btn-warning btn-sm" th:href="@{/endereco/editar/{id}(id=${endereco.idEndereco})}">Editar</a>
-                <a class="btn btn-primary btn-sm" th:href="@{/endereco/{id}(id=${endereco.idEndereco})}">Ver</a>
+                <a class="btn btn-danger btn-sm" th:href="@{/endereco/deletar/{id}(id=${endereco.idEndereco})}" th:text="#{link.excluir}">Excluir</a>
+                <a class="btn btn-warning btn-sm" th:href="@{/endereco/editar/{id}(id=${endereco.idEndereco})}" th:text="#{link.editar}">Editar</a>
+                <a class="btn btn-primary btn-sm" th:href="@{/endereco/{id}(id=${endereco.idEndereco})}" th:text="#{link.ver}">Ver</a>
             </td>
         </tr>
         </tbody>

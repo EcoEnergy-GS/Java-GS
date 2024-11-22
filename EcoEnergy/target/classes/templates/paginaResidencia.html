@@ -32,31 +32,33 @@
     </style>
 </head>
 <body>
-<h1 th:text="#{title.listaResidencias}">Lista de Residências</h1>
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th th:text="#{label.dispositivoMonitoramento}">Dispositivos de Monitoramento</th>
-        <th th:text="#{label.quantidadePessoas}">Quantidade de Pessoas</th>
-        <th th:text="#{label.mediaConsumo}">Média de Consumo</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="residencia : ${residencias}">
-        <td th:text="${residencia.idResidencia}"></td>
-        <td th:text="${residencia.dispositivoMonitoramento}"></td>
-        <td th:text="${residencia.quantidadePessoas}"></td>
-        <td th:text="${residencia.mediaConsumo}"></td>
-        <td class="actions">
-
-            <a th:href="@{/residencia/deletar/{id}(id=${residencia.idResidencia})}" onclick="return confirm('Você tem certeza que deseja excluir?');" th:text="#{link.excluir}">Excluir</a>
-            <a th:href="@{/residencia/editar/{id}(id=${residencia.idResidencia})}" th:text="#{link.editar}">Editar</a>
-            <a th:href="@{/residencia/{id}(id=${residencia.idResidencia})}" th:text="#{link.ver}">Ver</a>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<a class="add-button" href="/residencia/nova" th:text="#{btn.adicionar}">Adicionar</a>
+<div class="container mt-5">
+    <h1 class="text-center mb-4" th:text="#{title.listaResidencias}">Lista de Residências</h1>
+    <table class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th th:text="#{label.dispositivoMonitoramento}">Dispositovos de Monitoramento</th>
+            <th th:text="#{label.quantidadePessoas}">Pessoas na Residência</th>
+            <th th:text="#{label.mediaConsumo}">Média de Consumo</th>
+            <th th:text="#{label.acoes}">Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="residencia : ${residencias}">
+            <td th:text="${residencia.idResidencia}"></td>
+            <td th:text="${residencia.dispositivoMonitoramento}"></td>
+            <td th:text="${residencia.quantidadePessoas}"></td>
+            <td th:text="${residencia.mediaConsumo}"></td>
+            <td>
+                <a class="btn btn-danger btn-sm" th:href="@{/residencia/deletar/{id}(id=${residencia.idResidencia})}" th:text="#{link.excluir}">Excluir</a>
+                <a class="btn btn-warning btn-sm" th:href="@{/residencia/editar/{id}(id=${residencia.idResidencia})}" th:text="#{link.editar}">Editar</a>
+                <a class="btn btn-primary btn-sm" th:href="@{/residencia/{id}(id=${residencia.idResidencia})}" th:text="#{link.ver}">Ver</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-success mt-3" href="/residencia/nova" th:text="#{btn.adicionar}">Adicionar</a>
+</div>
 </body>
 </html>

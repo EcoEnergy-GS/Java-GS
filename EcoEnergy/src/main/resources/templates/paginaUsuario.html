@@ -3,34 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="#{title.listaUsuario}">Lista de Usuários</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        h1 {
+            color: #0d6efd; /* Azul */
+        }
+        label {
+            color: #20c997; /* Verde */
+        }
+        a {
+            color: #0d6efd;
+        }
+        a:hover {
+            color: #20c997;
+            text-decoration: none;
+        }
+        button {
+            background-color: #20c997;
+            border: none;
+        }
+        button:hover {
+            background-color: #0d6efd;
+        }
+    </style>
 </head>
 <body>
-<h1 th:text="#{title.listaUsuario}">Lista de Usuários</h1>
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th th:text="#{label.nomeCompleto}">Nome Completo</th>
-        <th th:text="#{label.telefone}">Telefone</th>
-        <th th:text="#{label.pontosUsuario}">Pontos do Usuário</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="usuario : ${usuarios}">
-        <td th:text="${usuario.idUsuarios}"></td>
-        <td th:text="${usuario.nome}"></td>
-        <td th:text="${usuario.telefone}"></td>
-        <td th:text="${usuario.pontos}"></td>
-        <td class="actions">
-
-            <a th:href="@{/usuario/deletar/{id}(id=${usuario.idUsuarios})}" onclick="return confirm('Você tem certeza que deseja excluir?');" th:text="#{link.excluir}">Excluir</a>
-            <a th:href="@{/usuario/editar/{id}(id=${usuario.idUsuarios})}" th:text="#{link.editar}">Editar</a>
-            <a th:href="@{/usuario/{id}(id=${usuario.idUsuarios})}" th:text="#{link.ver}">Ver</a>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<a class="add-button" href="/usuario/nova" th:text="#{btn.atualizar}">Adicionar</a>
+<div class="container mt-5">
+    <h1 class="text-center mb-4" th:text="#{title.listaUsuario}">Lista de Usuários</h1>
+    <table class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th th:text="#{label.nomeCompleto}">Nome Completo</th>
+            <th th:text="#{label.senha}">Senha</th>
+            <th th:text="#{label.telefone}">Telefone</th>
+            <th th:text="#{label.pontosUsuario}">Pontos do Usuário</th>
+            <th th:text="#{label.acoes}">Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="usuario : ${usuarios}">
+            <td th:text="${usuario.idUsuarios}"></td>
+            <td th:text="${usuario.nome}"></td>
+            <td th:text="${usuario.senha}"></td>
+            <td th:text="${usuario.telefone}"></td>
+            <td th:text="${usuario.pontos}"></td>
+            <td>
+                <a class="btn btn-danger btn-sm" th:href="@{/usuario/deletar/{id}(id=${usuario.idUsuarios})}" th:text="#{link.excluir}">Excluir</a>
+                <a class="btn btn-warning btn-sm" th:href="@{/usuario/editar/{id}(id=${usuario.idUsuarios})}" th:text="#{link.editar}">Editar</a>
+                <a class="btn btn-primary btn-sm" th:href="@{/usuario/{id}(id=${usuario.idUsuarios})}" th:text="#{link.ver}">Ver</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-success mt-3" href="/usuario/nova" th:text="#{btn.adicionar}">Adicionar</a>
+</div>
 </body>
 </html>

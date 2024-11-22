@@ -32,16 +32,19 @@
     </style>
 </head>
 <body>
-<h1 th:text="#{title.detalhesUsuario}">Detalhes do Usuário</h1>
-<div class="details">
-    <p><span th:text="${usuario.idUsuarios}"></span></p>
-    <p><span th:text="${usuario.nome}"></span></p>
-    <p><span th:text="${usuario.telefone}"></span></p>
-    <p><span th:text="${usuario.pontos}"></span></p>
-</div>
-<div class="actions">
-    <a href="/usuario" th:text="#{link.voltar}">Voltar</a>
-    <a class="edit-button" th:href="@{/usuario/editar/{id}(id=${usuario.idUsuarios})}" th:text="#{link.editar}">Editar</a>
+<div class="container mt-5">
+    <h1 class="text-center mb-4" th:text="#{title.detalhesUsuario}">Detalhes do Usuário</h1>
+    <div class="details bg-dark text-white p-3 rounded">
+        <p><strong>ID:</strong> <span th:text="${usuario.idUsuarios}"></span></p>
+        <p><strong>Nome Completo:</strong> <span th:text="${usuario.nome}"></span></p>
+        <p><strong>Senha:</strong> <span th:text="${usuario.senha}"></span></p>
+        <p><strong>Telefone:</strong> <span th:text="${usuario.telefone}"></span></p>
+        <p><strong>Pontos do Usuário:</strong> <span th:text="${usuario.pontos}"></span></p>
+    </div>
+    <div class="actions mt-4 d-flex justify-content-between">
+        <a href="/usuario" class="btn btn-secondary" th:text="#{link.voltar}">Voltar</a>
+        <a href="#" class="btn btn-primary" th:href="@{/usuario/editar/{id}(id=${usuario.idUsuarios})}" th:text="#{link.editar}">Editar</a>
+    </div>
 </div>
 </body>
 </html>

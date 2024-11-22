@@ -32,22 +32,30 @@
     </style>
 </head>
 <body>
-<h1 th:text="#{title.editUsuario}">Editar Usuário</h1>
-<form th:action="@{/usuario/atualizar/{id}(id=${usuario.getIdUsuarios()})}" th:object="${usuario}" method="post">
-    <label for="nome" th:text="#{label.nomeCompleto}">Nome Completo</label>
-    <input type="text" id="nome" th:field="*{nome}" />
-
-    <label for="senha" th:text="#{label.senha}">Senha</label>
-    <textarea id="senha" th:field="*{senha}"></textarea>
-
-    <label for="telefone" th:text="#{label.telefone}">Telefone</label>
-    <input type="text" id="telefone" th:field="*{telefone}" />
-
-    <label for="pontos" th:text="#{label.pontosUsuario}">Pontos do Usuário</label>
-    <input type="text" id="pontos" th:field="*{pontos}" />
-
-    <button type="submit" th:text="#{btn.atualizar}">Atualizar</button>
-    <a href="/usuario" th:text="#{link.cancelar}">Cancelar</a>
-</form>
+<div class="container mt-5">
+    <h1 class="text-center mb-4" th:text="#{title.editUsuario}">Editar Usuário</h1>
+    <form th:action="@{/usuario/atualizar/{id}(id=${usuario.getIdUsuarios()})}" th:object="${usuario}" method="post" class="mx-auto col-lg-6">
+        <div class="mb-3">
+            <label for="nome" th:text="#{label.nomeCompleto}">Nome Completo</label>
+            <input type="text" id="nome" class="form-control" th:field="*{nome}" />
+        </div>
+        <div class="mb-3">
+            <label for="senha" th:text="#{label.senha}">Senha</label>
+            <input type="text" id="senha" class="form-control" th:field="*{senha}" />
+        </div>
+        <div class="mb-3">
+            <label for="telefone" th:text="#{label.telefone}">Telefone</label>
+            <input type="text" id="telefone" class="form-control" th:field="*{telefone}" />
+        </div>
+        <div class="mb-3">
+            <label for="pontos" th:text="#{label.pontosUsuario}">Pontos do Usuário</label>
+            <input type="text" id="pontos" class="form-control" th:field="*{pontos}" />
+        </div>
+        <div class="d-flex justify-content-between">
+            <a href="/usuario" class="btn btn-secondary" th:text="#{link.cancelar}">Cancelar</a>
+            <button type="submit" class="btn" th:text="#{btn.atualizar}">Atualizar</button>
+        </div>
+    </form>
+</div>
 </body>
 </html>

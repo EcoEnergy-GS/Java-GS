@@ -32,17 +32,22 @@
     </style>
 </head>
 <body>
-<h1 th:text="#{title.addRecompensa}">Adicionar Recompensa</h1>
-<form action="#" th:action="@{/recompensa/adicionar}" th:object="${recompensa}" method="post">
-
-    <label for="descricao" th:text="#{label.descricao}">Descrição</label>
-    <input type="text" id="descricao" th:field="*{descricao}" />
-
-    <label for="pontosNecessarios" th:text="#{label.pontosNecessarios}">Pontos Necessários</label>
-    <input type="text" id="pontosNecessarios" th:field="*{pontosNecessarios}" />
-
-    <button type="submit" th:text="#{btn.adicionar}">Adicionar</button>
-</form>
-<a href="/recompensa" th:text="#{link.voltar}">Voltar</a>
+<div class="container mt-5">
+    <h1 class="text-center mb-4" th:text="#{title.addRecompensa}">Adicionar Recompensa</h1>
+    <form th:action="@{/recompensa/adicionar}" th:object="${recompensa}" method="post" class="mx-auto col-lg-6">
+        <div class="mb-3">
+            <label for="descricao" th:text="#{label.descricao}">Descrição</label>
+            <input type="text" id="descricao" class="form-control" th:field="*{descricao}" />
+        </div>
+        <div class="mb-3">
+            <label for="pontosNecessarios" th:text="#{label.pontosNecessarios}">Pontos Necessários</label>
+            <input type="text" id="pontosNecessarios" class="form-control" th:field="*{pontosNecessarios}" />
+        </div>
+        <div class="d-flex justify-content-between">
+            <a href="/recompensa" class="btn btn-secondary" th:text="#{link.voltar}">Voltar</a>
+            <button type="submit" class="btn" th:text="#{btn.adicionar}">Adicionar</button>
+        </div>
+    </form>
+</div>
 </body>
 </html>

@@ -34,13 +34,13 @@
 <body>
 <div class="container mt-5">
     <h1 class="text-center mb-4" th:text="#{title.listaConsumoEnergia}">Lista de Consumo de Energia</h1>
-    <table class="table table-dark table-striped table-bordered">
+    <table class="table table-dark table-striped">
         <thead>
         <tr>
             <th>ID</th>
             <th th:text="#{label.dataCobranca}">Data da Cobrança</th>
             <th th:text="#{label.consumoEnergia}">Consumo de Energia</th>
-            <th>Ações</th>
+            <th th:text="#{label.acoes}">Ações</th>
         </tr>
         </thead>
         <tbody>
@@ -49,19 +49,14 @@
             <td th:text="${consumoEnergia.data}"></td>
             <td th:text="${consumoEnergia.consumo}"></td>
             <td>
-                <div class="d-flex gap-2">
-                    <a class="btn btn-danger btn-sm" th:href="@{/consumoEnergia/deletar/{id}(id=${consumoEnergia.idConsumo})}"
-                       onclick="return confirm('Você tem certeza que deseja excluir?');" th:text="#{link.excluir}">Excluir</a>
-                    <a class="btn btn-warning btn-sm" th:href="@{/consumoEnergia/editar/{id}(id=${consumoEnergia.idConsumo})}" th:text="#{link.editar}">Editar</a>
-                    <a class="btn btn-primary btn-sm" th:href="@{/consumoEnergia/{id}(id=${consumoEnergia.idConsumo})}" th:text="#{link.ver}">Ver</a>
-                </div>
+                <a class="btn btn-danger btn-sm" th:href="@{/consumoEnergia/deletar/{id}(id=${consumoEnergia.idConsumo})}" th:text="#{link.excluir}">Excluir</a>
+                <a class="btn btn-warning btn-sm" th:href="@{/consumoEnergia/editar/{id}(id=${consumoEnergia.idConsumo})}" th:text="#{link.editar}">Editar</a>
+                <a class="btn btn-primary btn-sm" th:href="@{/consumoEnergia/{id}(id=${consumoEnergia.idConsumo})}" th:text="#{link.ver}">Ver</a>
             </td>
         </tr>
         </tbody>
     </table>
-    <div class="text-end">
-        <a class="add-button" href="/consumoEnergia/nova" th:text="#{btn.adicionar}">Adicionar</a>
-    </div>
+    <a class="btn btn-success mt-3" href="/consumoEnergia/nova" th:text="#{btn.adicionar}">Adicionar</a>
 </div>
 </body>
 </html>
